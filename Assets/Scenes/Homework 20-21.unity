@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 2089683986}
   - component: {fileID: 2089683985}
   m_Layer: 0
-  m_Name: RayController
+  m_Name: InputController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -877,11 +877,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a60747a64386b440b14fd2a5b4945fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _boomRadius: 3
-  _boomForce: 1000
-  _boomEffectPrefab: {fileID: 885052112669815828, guid: c2e02f13124381e4c8a851149cd599da,
+  dragHeightOffset: 2.5
+  boomRadius: 3
+  boomForce: 800
+  boomEffectPrefab: {fileID: 2661466256319219044, guid: df2527528f389ce428023349503d76bf,
     type: 3}
-  _dragHeightOffset: 2.5
 --- !u!4 &2089683986
 Transform:
   m_ObjectHideFlags: 0

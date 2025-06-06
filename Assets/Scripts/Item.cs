@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Item : MonoBehaviour, IDraggable, IBoomable
 {
-    private Rigidbody _rigibody;
+    private Rigidbody _rigidbody;
 
     private void Awake()
     {
-        _rigibody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();
 
-        if (_rigibody == null)
+        if (_rigidbody == null)
             Debug.LogError($"На {gameObject.name} не найден Rigidbody!");
     }
     public void OnDragEnd()
@@ -23,7 +23,12 @@ public class Item : MonoBehaviour, IDraggable, IBoomable
 
     public void OnBoom(Vector3 boomPosition, float force, float radius)
     {
-        _rigibody.AddExplosionForce(force, boomPosition, radius);
+        _rigidbody.AddExplosionForce(force, boomPosition, radius);
         Debug.Log($"{gameObject.name} получил взрыв");
+    }
+
+    public void SetPosition(Vector3 position)
+    {
+        _rigidbody.MovePosition(position);
     }
 }
